@@ -1,0 +1,404 @@
+html {
+	background-color: #fdfdfd;
+}
+
+body {
+	color: #323232;
+	width: 70em;
+	font-family: Lato, Helvetica Neue, Helvetica, Tahoma, Verdana, sans-serif;
+	margin: 0 auto;
+	padding-top: 3em;
+}
+
+#rotate img {
+    width: 20em;
+}
+
+#rotate {
+    position: absolute;
+    width: 40em;
+    left: 50%;
+    margin-left: -20em;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    overflow: hidden;
+/* 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 50%;
+ */
+    text-align: center;
+    display: none;
+}
+
+#rotate p {
+    font-size: 2em;
+    text-align: center;
+}
+
+#head {
+	font-family: Quicksand, Helvetica Neue, Helvetica, Tahoma, Verdana, sans-serif;
+	width: 17em;
+	float: right;
+	position: fixed;
+	margin-bottom: -3em;
+}
+
+a, .highlighted {
+	color: #607A29;
+	text-decoration: none;
+	font-weight: 400;
+}
+
+a:hover {
+	color: #9BBB59;
+}
+
+a.no-highlight:hover {
+    color: #607A29;
+}
+
+:focus {outline:none;}
+::-moz-focus-inner {border:0;}
+
+#head h1 {
+	font-size: 2.3em;
+	font-weight: 400;
+	text-align: right;
+	float: right;
+	margin: 0;
+}
+
+#head h2 {
+	font-size: 1.3em;
+	font-weight: 400;
+	text-align: right;
+	float: right;
+}
+
+svg.defs-only {
+	position: absolute;
+	height: 0;
+	width: 0;
+	overflow: none;
+	left: -100vw;
+}
+
+#aboutImg {
+    border-radius: 50%;
+	width: 15em;
+	margin-top: 1.3em;
+}
+
+#icons {
+	font-size: 3em;
+	text-align: center;
+	margin-top: 1em;
+}
+
+#links {
+	font-size: 1.3em;
+	text-align: center;
+	margin-top: 1em;
+	font-weight: 300;
+}
+
+#content {
+	float: right;
+	width: 50em;
+	line-height: 1.2em;
+}
+
+#content .line {
+	border: 0;
+	background: #aaa;
+	height: 1px;
+	margin: 1em 0 0.1em;
+}
+
+#content h2 {
+	font-family: Quicksand, Helvetica Neue, Helvetica, Tahoma, Verdana, sans-serif;
+	margin-top: 0.3em;
+	margin-bottom: -0.2em;
+}
+
+#content h3 {
+	font-family: Quicksand, Helvetica Neue, Helvetica, Tahoma, Verdana, sans-serif;
+	margin-top: 1.5em;
+	margin-bottom: -0.2em;
+}
+
+#content h4 {
+	font-size: 1em;
+	font-family: Quicksand, Helvetica Neue, Helvetica, Tahoma, Verdana, sans-serif;
+	font-weight: 300;
+	font-style: italic;
+}
+
+#content p, li {
+	font-weight: 300;
+	font-size: 1em;
+	line-height: 2em;
+}
+
+#content ul ul li {
+	font-size: 0.8em;
+}
+
+.section {
+	margin-bottom: 3em;
+}
+
+#labGrid {
+	width: 95%;
+	float: right;
+}
+
+div.labItem a.labBullet {
+    display: block;
+    height: 7em;
+}
+
+div.labItem img {
+	height: 8em;
+	transition: box-shadow 0.25s, opacity 0.25s;
+	float: left;
+	border: 0.3em solid #607A29;
+	border-radius: 8em;
+	z-index: 2;
+	position: relative;
+}
+
+div.labItem a.labBullet:hover img {
+	border-color: #9BBB59;
+}
+
+div.labItem h2 {
+    font-size: 1.1em;
+    position: relative;
+    top: 2.1em;
+    left: 1em;
+    z-index: 1;
+    transition: border-bottom 0.25s;
+    overflow: hidden;
+    display: inline;
+}
+
+div.labItem a.labBullet:hover h2:after {
+    right: 0;
+}
+
+div.labItem h2::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: 120%;
+    transition: right 0.4s ease-out; 
+    left: -1em;
+    bottom: -0.3em;
+    background: #9BBB59;
+    height: 0.2em;
+}
+
+div.labItem h2::before {
+    content: "";
+    position: absolute;
+    z-index: -11;
+    right: 120%;
+    transition: right 0.4s ease-out; 
+    left: -1em;
+    bottom: -0.3em;
+    background: #607A29;
+    height: 0.2em;
+    right: 0;
+}
+
+
+div.labItem {
+    text-align: left;
+}
+
+div.labItem p {
+    position: relative;
+    bottom: 3em;
+    margin-left: 10em;
+	margin-bottom: -1em;
+}
+
+#publication h3 {
+	font-family: Quicksand, Helvetica Neue, Helvetica, Tahoma, Verdana, sans-serif;
+	text-decoration: underline;
+	margin-bottom: -2.3em;
+}
+
+#publication p {
+	font-family: Quicksand, Helvetica Neue, Helvetica, Tahoma, Verdana, sans-serif;
+	font-weight: normal;
+}
+
+.aboutGrid {
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+}
+
+.aboutGrid img {
+	height: 10em;
+	border: solid;
+	border-width: 1px;
+	margin: 1em auto -0.5em auto;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+/* 
+.aboutGrid img:hover {
+    opacity: 0.7;
+}
+ */
+
+.aboutGrid p {
+	margin: 0.5em auto 1.5em auto;
+}
+
+.logo {
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+}
+
+.logo img {
+	margin: 1em 0em 0.1em;
+	transition: 0.3s;
+	width: 20%;
+	height: 20%
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 12vh;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: none;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-height: 70vh;
+    max-width: 80vw;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 70em;
+    text-align: center;
+    color: #ddd;
+    padding: 1em 0;
+    height: 5em;
+    font-size: 1em;
+}
+
+#modalClose {
+    position: absolute;
+    top: 1em;
+    right: 3em;
+    color: #eee;
+    font-size: 1.8em;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#modalClose:hover, #modalClose:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#captions {
+    display: none;
+}
+
+#extraPics p {
+	text-align: center;
+}
+
+#canvas-container {
+    width: 50em;
+    height: 20em;
+    background-color: #eee;
+    position: relative;
+}
+
+#canvas-container span {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+}
+
+div.picture {
+    text-align: center;
+    background: repeating-linear-gradient(
+        -45deg,
+        #f2f7ed,
+        #f2f7ed 5px,
+        #F1F6EC 5px,
+        #F1F6EC 10px
+    );
+    padding-top: 1em;
+    padding-bottom: -0.2em;
+/*     width: 42em; */
+/*     margin-left: 2em; */
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+div.picture img {
+    width: 95%;
+    border: 1px solid #999;
+}
+
+div.picture iframe {
+    width: 95%;
+    height: 18em;
+}
+
+div.picture p {
+    width: 90%;
+    margin-left: auto;
+	margin-right: auto;
+    font-style: italic;
+    position: relative;
+    bottom: 0.8em;
+}
+
+
+.date {
+	float:right;
+	font-weight: normal;
+	color: #777;
+}
+
+
+h2.subtitle {
+	font-weight: normal;
+	color: #777;
+	font-size: 1.1em;
+	padding-bottom: 1.5em;
+}
